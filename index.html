@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>marked.js</title>
+  <script src="https://cdn.rawgit.com/chjj/marked/master/marked.min.js"></script>
+</head>
+<body>
+  <textarea name="" id="markdown_txt" cols="30" rows="10" placeholder="テキスト入力"></textarea>
+  <input type="button" id="change_btn" value="変換">
+
+  <div id="marked_txt"></div>
+  <!-- <div id="mdrender"></div>
+  <div id="mdraw" style="display:none;">
+  ## ここにMarkdownの記述で本文を書いていく
+  
+  　```
+  画像を使うときは<img>タグを使う
+  　```
+  
+  1. aa
+  1. bb
+  
+  
+  </div> -->
+  <script>
+    // document.getElementById("mdrender").innerHTML = marked(document.getElementById("mdraw").innerHTML);
+    document.getElementById("change_btn").onclick=function(){
+      document.getElementById("marked_txt").innerHTML=marked(document.getElementById("markdown_txt").value);
+    }
+  </script>
+</body>
